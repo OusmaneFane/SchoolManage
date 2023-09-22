@@ -111,9 +111,9 @@ class MarkController extends Controller
 
  foreach ($d['subjects'] as $sub) {
      foreach ($d['marks']->where('subject_id', $sub->id)->where('exam_id', $ex->id) as $mk) {
-         $total = ($mk->t1 + $mk->t2 + ($mk->exm * $sub->coefficient)) ?: 0;
+         $total = ($mk->t1 + ($mk->exm * $sub->coefficient)) ?: 0;
          $overallTotal += $total; // Accumulate the weighted total
-         $overallCoefficientTotal += $sub->coefficient + 2;
+         $overallCoefficientTotal += $sub->coefficient + 1;
 
      }
  }
@@ -251,11 +251,11 @@ class MarkController extends Controller
         $all_st_ids[] = $mk->student_id;
 
         $d['t1'] = $t1 = $mks['t1_' . $mk->id];
-        $d['t2'] = $t2 = $mks['t2_' . $mk->id];
+        // $d['t2'] = $t2 = $mks['t2_' . $mk->id];
         $d['exm'] = $exm = $mks['exm_' . $mk->id];
 
         /** Calculate the average using the formula **/
-        $average = ($t1 + $t2 + ($exm * $subjectCoefficient)) / (2 + $subjectCoefficient);
+        $average = ($t1  + ($exm * $subjectCoefficient)) / (1 + $subjectCoefficient);
 
         /** Update the database with the calculated average **/
         $d['tex' . $exam->term] = $average;

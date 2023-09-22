@@ -22,10 +22,11 @@
     <thead>
     <tr>
         <th rowspan="2">MATIERES</th>
-        <th colspan="3">CONTINUOUS ASSESSMENT</th>
-        <th rowspan="2">EXAMEN<br>(60)</th>
-        <th rowspan="2">NOTES FINALES <br> (100%)</th>
-        <th rowspan="2">APPRECIATION</th>
+        <th rowspan="2">DEVOIR</th>
+        <th rowspan="2">EXAMEN<br></th>
+        <th rowspan="2">Coeff<br></th>
+        <th rowspan="2">NOTES FINALES <br> </th>
+        <th rowspan="2">GRADES</th>
         <th rowspan="2">CLASSEMENT <br> /MATIERE</th>
 
 
@@ -40,11 +41,11 @@
 
         <th rowspan="2">APPRECIATIONS</th>
     </tr>
-    <tr>
-        <th>DEV1(20)</th>
-        <th>DEV2(20)</th>
-        <th>TOTAL(40)</th>
-    </tr>
+    {{-- <tr> --}}
+        {{-- <th>DEVOIR</th> --}}
+        {{-- <th>DEV2</th>
+        <th>MOY DEV</th> --}}
+    {{-- </tr> --}}
     </thead>
     <tbody>
     @foreach($subjects as $sub)
@@ -52,10 +53,10 @@
             <td style="font-weight: bold">{{ $sub->name }}</td>
             @foreach($marks->where('subject_id', $sub->id)->where('exam_id', $ex->id) as $mk)
                 <td>{{ $mk->t1 ?: '-' }}</td>
-                <td>{{ $mk->t2 ?: '-' }}</td>
-                <td>{{ $mk->tca ?: '-' }}</td>
+                {{-- <td>{{ $mk->t2 ?: '-' }}</td>
+                <td>{{ ($mk->t1 + $mk->t2)/2 ?: '-' }}</td> --}}
                 <td>{{ $mk->exm ?: '-' }}</td>
-
+                <td>{{ $sub->coefficient ?: '-' }}</td>
                 <td>{{ $mk->$tex ?: '-'}}</td>
                 <td>{{ $mk->grade ? $mk->grade->name : '-' }}</td>
                 <td>{!! ($mk->grade) ? Mk::getSuffix($mk->sub_pos) : '-' !!}</td>

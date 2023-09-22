@@ -37,6 +37,12 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label font-weight-semibold">Coefficient</label>
+                            <div class="col-lg-9">
+                                <input name="coefficient" value="{{ $s->coefficient }}"  type="text" class="form-control" placeholder="Coefficient">
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <label for="teacher_id" class="col-lg-3 col-form-label font-weight-semibold">Enseignant</label>

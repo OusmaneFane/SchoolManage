@@ -52,6 +52,12 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="form-group row">
+                                    <label for="coefficient" class="col-lg-3 col-form-label font-weight-semibold">Coefficient<span class="text-danger">*</span></label>
+                                    <div class="col-lg-9">
+                                        <input id="coefficient" required name="coefficient" value="{{ old('coefficient') }}" type="text" class="form-control" placeholder="Coefficient de la matière">
+                                    </div>
+                                </div>
 
                                 <div class="form-group row">
                                     <label for="teacher_id" class="col-lg-3 col-form-label font-weight-semibold">Enseignant <span class="text-danger">*</span></label>
@@ -81,6 +87,7 @@
                                 <th>Nom</th>
                                 <th>Nom court</th>
                                 <th>Classe</th>
+                                <th>Coeff</th>
                                 <th>Enseignant</th>
                                 <th>Action</th>
                             </tr>
@@ -92,6 +99,7 @@
                                     <td>{{ $s->name }} </td>
                                     <td>{{ $s->slug }} </td>
                                     <td>{{ $s->my_class->name }}</td>
+                                    <td>{{ $s->coefficient }}</td>
                                     <td>{{ $s->teacher->name }}</td>
                                     <td class="text-center">
                                         <div class="list-icons">

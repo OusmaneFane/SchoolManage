@@ -77,8 +77,8 @@
                         @foreach($subjects as $sub)
                             <th title="{{ $sub->name }}" rowspan="2">{{ strtoupper($sub->slug ?: $sub->name) }}</th>
                         @endforeach
-                        <th style="color: darkred">Total</th>
-                        <th style="color: darkblue">Average</th>
+                        {{-- <th style="color: darkred">Total</th> --}}
+                        <th style="color: darkblue">Moyenne</th>
                         <th style="color: darkgreen">Position</th>
                     </tr>
                     </thead>
@@ -97,10 +97,15 @@
                                     $totalMarks += is_numeric($mark) ? $mark : 0;
                                     $subjectCount++;
                                 @endphp
+                                       {{-- @foreach($marks->where('subject_id', $sub->id)->where('exam_id', $ex->id) as $mk)
+                                            @php
+                                            $total = ($mk->t1 + $mk->t2 + ($mk->exm * $sub->coefficient)) ?: '-';
+                                            @endphp
+                                       @endforeach --}}
                                 <td>{{ $mark ?: '-' }}</td>
                             @endforeach
 
-                            <td style="color: darkred">{{ $totalMarks }}</td>
+                            {{-- <td style="color: darkred">{{ $total }}</td> --}}
                             <td style="color: darkblue">{{ $subjectCount > 0 ? number_format($totalMarks / $subjectCount, 2) : '-' }}</td>
                             <td style="color: darkgreen">{!! Mk::getSuffix($exr->where('student_id', $s->user_id)->first()->pos) ?: '-' !!}</td>
                         </tr>

@@ -6,9 +6,9 @@
             <th>S/N</th>
             <th>Nom & Prénoms</th>
             <th>Matricule</th>
-            <th>Devoir 1 (20)</th>
-            <th>Devoir 2 (20)</th>
-            <th>EXAMEN (60)</th>
+            <th>Devoir </th>
+            {{-- <th>Devoir 2 </th> --}}
+            <th>EXAMEN </th>
         </tr>
         </thead>
         <tbody>
@@ -20,7 +20,7 @@
 
 {{--                CA AND EXAMS --}}
 <td><input title="1ST CA" min="0.01" max="20" step="0.01" class="text-center" name="t1_{{ $mk->id }}" value="{{ $mk->t1 }}" type="number"></td>
-<td><input title="2ND CA" min="0.01" max="20" step="0.01" class="text-center" name="t2_{{ $mk->id }}" value="{{ $mk->t2 }}" type="number"></td>
+{{-- <td><input title="2ND CA" min="0.01" max="20" step="0.01" class="text-center" name="t2_{{ $mk->id }}" value="{{ $mk->t2 }}" type="number"></td> --}}
 <td><input title="EXAM" min="0.01" max="60" step="0.01" class="text-center" name="exm_{{ $mk->id }}" value="{{ $mk->exm }}" type="number"></td>
 
             </tr>
