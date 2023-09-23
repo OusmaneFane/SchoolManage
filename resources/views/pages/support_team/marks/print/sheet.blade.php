@@ -24,6 +24,7 @@
         <th rowspan="2">MATIERES</th>
         <th rowspan="2">DEVOIR</th>
         <th rowspan="2">EXAMEN<br></th>
+        <th rowspan="2">MOYENNE<br></th>
         <th rowspan="2">Coeff<br></th>
         <th rowspan="2">NOTES FINALES <br> </th>
         <th rowspan="2">GRADES</th>
@@ -48,37 +49,39 @@
     {{-- </tr> --}}
     </thead>
     <tbody>
-    @foreach($subjects as $sub)
-        <tr>
-            <td style="font-weight: bold">{{ $sub->name }}</td>
-            @foreach($marks->where('subject_id', $sub->id)->where('exam_id', $ex->id) as $mk)
-                <td>{{ $mk->t1 ?: '-' }}</td>
-                {{-- <td>{{ $mk->t2 ?: '-' }}</td>
-                <td>{{ ($mk->t1 + $mk->t2)/2 ?: '-' }}</td> --}}
-                <td>{{ $mk->exm ?: '-' }}</td>
-                <td>{{ $sub->coefficient ?: '-' }}</td>
-                <td>{{ $mk->$tex ?: '-'}}</td>
-                <td>{{ $mk->grade ? $mk->grade->name : '-' }}</td>
-                <td>{!! ($mk->grade) ? Mk::getSuffix($mk->sub_pos) : '-' !!}</td>
-                <td>{{ $mk->grade ? $mk->grade->remark : '-' }}</td>
 
-                {{--@if($ex->term == 3)
-                    <td>{{ $mk->tex3 ?: '-' }}</td>
-                    <td>{{ Mk::getSubTotalTerm($student_id, $sub->id, 1, $mk->my_class_id, $year) }}</td>
-                    <td>{{ Mk::getSubTotalTerm($student_id, $sub->id, 2, $mk->my_class_id, $year) }}</td>
-                    <td>{{ $mk->cum ?: '-' }}</td>
-                    <td>{{ $mk->cum_ave ?: '-' }}</td>
+
+        @foreach($subjects as $sub)
+            <tr>
+                <td style="font-weight: bold">{{ $sub->name }}</td>
+                @php
+                $subjectCoeff = $sub->coefficient;
+
+               @endphp
+                @foreach($marks->where('subject_id', $sub->id)->where('exam_id', $ex->id) as $mk)
+                    <td>{{ $mk->t1 ?: '-' }}</td>
+                    <td>{{ $mk->exm ?: '-' }}</td>
+                    @php
+                    $moy = ($mk->t1 + $mk->exm) / 2;
+                    $moyCoeff = $moy * $subjectCoeff;
+                    // $totalMoyCoeff += $moyCoeff; // Add to the total Moyenne Coefficient
+
+                    @endphp
+                    <td>{{ $moy ?: '-' }}</td>
+                    <td>{{ $subjectCoeff ?: '-' }}</td>
+                    <td>{{ $moyCoeff ?: '-' }}</td>
                     <td>{{ $mk->grade ? $mk->grade->name : '-' }}</td>
+                    <td>{!! ($mk->grade) ? Mk::getSuffix($mk->sub_pos) : '-' !!}</td>
                     <td>{{ $mk->grade ? $mk->grade->remark : '-' }}</td>
-                @endif--}}
-
+                @endforeach
+            </tr>
             @endforeach
+        <tr>
+            <td colspan="4"><strong>TOTAL SCORES OBTENUS: </strong> {{ $totalMoyCoeff }}</td>
+            <td colspan="1"><strong>TOTAL COEFF: </strong> {{ $totalCoeff }}</td>
+            <td colspan="3"><strong>MOYENNE: </strong> {{ $finalMoyenne }}</td>
+            <td colspan="3"><strong>MOYENNE DE LA CLASSE: </strong> {{ $exr->class_ave }}</td>
         </tr>
-    @endforeach
-    <tr>
-        <td colspan="3"><strong>TOTAL SCORES OBTENUS: </strong> {{ $exr->total }}</td>
-        <td colspan="3"><strong>MOYENNE FINALE: </strong> {{ $exr->ave }}</td>
-        <td colspan="3"><strong>MOYENNE DE LA CLASSE: </strong> {{ $exr->class_ave }}</td>
-    </tr>
-    </tbody>
+        </tbody>
+
 </table>

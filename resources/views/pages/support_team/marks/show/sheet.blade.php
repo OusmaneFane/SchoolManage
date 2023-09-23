@@ -6,8 +6,9 @@
         <th rowspan="2">DEVOIR<br></th>
         {{-- <th rowspan="2">DEVOIR2<br></th> --}}
         <th rowspan="2">EXAMENS<br></th>
-        <th rowspan="2">TOTAL<br></th>
+        <th rowspan="2">MOYENNE<br></th>
         <th rowspan="2">Coeff<br></th>
+        <th rowspan="2">MOY x COEFF<br></th>
         <th rowspan="2">GRADE</th>
         <th rowspan="2">RANG <br> /MATIERE</th>
         <th rowspan="2">APPRECIATIONS</th>
@@ -26,11 +27,13 @@
 
                 {{-- Calculate the total based on coefficients --}}
                 @php
-                    $total = ($mk->t1  + ($mk->exm * $sub->coefficient)) ?: '-';
-                @endphp
+                    $moy = ($mk->t1  + $mk->exm )/2
 
-                <td>{{ $total }}</td>
+                @endphp
+                <td>{{ $moy }}</td>
                 <td>{{ $sub->coefficient }}</td>
+                <td>{{  $moy * $sub->coefficient }}</td>
+
 
                 {{-- Grade, Subject Position & Remarks --}}
                 <td>{{ ($mk->grade) ? $mk->grade->name : '-' }}</td>
@@ -40,8 +43,11 @@
         </tr>
     @endforeach
     <tr>
-        <td colspan="4"><strong>TOTAL SCORES OBTENUS: </strong> {{ $total }}</td>
-        <td colspan="3"><strong>MOYENNE FINALE: </strong> {{ $overallAverage }}</td>
+
+        <td colspan="5"><strong>TOTAL SCORES OBTENUS: </strong> {{ $totalMoyCoeff }}</td>
+        <td colspan="1"><strong>TOTAL COEFF: </strong> {{ $totalCoeff }}</td>
+
+        <td colspan="3"><strong>MOYENNE FINALE: </strong> {{ $finalMoyenne }}</td>
         <td colspan="2"><strong>MOYENNE DE LA CLASSE: </strong> {{ $exr->class_ave }}</td>
     </tr>
     </tbody>

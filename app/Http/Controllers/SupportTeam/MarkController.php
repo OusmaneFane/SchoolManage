@@ -71,19 +71,19 @@ class MarkController extends Controller
     public function show($student_id, $year)
     {
         /* Prevent Other Students/Parents from viewing Result of others */
-        if(Auth::user()->id != $student_id && !Qs::userIsTeamSAT() && !Qs::userIsMyChild($student_id, Auth::user()->id)){
+        if (Auth::user()->id != $student_id && !Qs::userIsTeamSAT() && !Qs::userIsMyChild($student_id, Auth::user()->id)) {
             return redirect(route('dashboard'))->with('pop_error', __('msg.denied'));
         }
 
-        if(Mk::examIsLocked() && !Qs::userIsTeamSA()){
+        if (Mk::examIsLocked() && !Qs::userIsTeamSA()) {
             Session::put('marks_url', route('marks.show', [Qs::hash($student_id), $year]));
 
-            if(!$this->checkPinVerified($student_id)){
+            if (!$this->checkPinVerified($student_id)) {
                 return redirect()->route('pins.enter', Qs::hash($student_id));
             }
         }
 
-        if(!$this->verifyStudentExamYear($student_id, $year)){
+        if (!$this->verifyStudentExamYear($student_id, $year)) {
             return $this->noStudentRecord();
         }
 
@@ -105,23 +105,42 @@ class MarkController extends Controller
             return $this->noStudentRecord();
         }
 
- // Calculate the overall weighted average based on subject coefficients
- $overallTotal = 0;
- $overallCoefficientTotal = 0;
+        // Calculate the overall weighted average based on subject coefficients
+        $totalMoyCoeff = 0;
+        $totalCoeff = 0;
 
- foreach ($d['subjects'] as $sub) {
-     foreach ($d['marks']->where('subject_id', $sub->id)->where('exam_id', $ex->id) as $mk) {
-         $total = ($mk->t1 + ($mk->exm * $sub->coefficient)) ?: 0;
-         $overallTotal += $total; // Accumulate the weighted total
-         $overallCoefficientTotal += $sub->coefficient + 1;
+        foreach ($d['subjects'] as $sub) {
+            $subjectCoeff = $sub->coefficient;
+            $totalCoeff += $subjectCoeff; // Add to the total coefficient
 
-     }
- }
+            // Calculate the subject's total Moyenne Coefficient
+            $totalMoyCoeffSubject = 0;
 
- $overallAverage = ($overallCoefficientTotal > 0) ? number_format($overallTotal / $overallCoefficientTotal, 2) : 0;
+            foreach ($d['marks']->where('subject_id', $sub->id)->where('exam_id', $ex->id) as $mk) {
+                $t1 = $mk->t1;
+                $exm = $mk->exm;
 
- // Pass the overall average to the view
- $d['overallAverage'] = $overallAverage;
+                // Calculate the average and Moyenne Coefficient for each subject
+                $moy = ($t1 + $exm) / 2;
+                $moyCoeff = $moy * $subjectCoeff;
+
+                // Add the subject's Moyenne Coefficient to the total
+                $totalMoyCoeff += $moyCoeff;
+                $totalMoyCoeffSubject += $moyCoeff;
+            }
+
+            // Pass the total Moyenne Coefficient for the subject to the view
+            $sub->totalMoyCoeff = $totalMoyCoeffSubject;
+        }
+
+        // Calculate the overall final Moyenne based on total Moyenne Coefficient and total coefficient
+        $finalMoyenne = ($totalCoeff > 0) ? ($totalMoyCoeff / $totalCoeff) : '-';
+
+        // Pass the overall final Moyenne to the view
+        $d['finalMoyenne'] = $finalMoyenne;
+        $d['totalMoyCoeff'] =  $totalMoyCoeff;
+        $d['totalCoeff'] = $totalCoeff;
+
 
         if ($mc) {
             $d['class_type'] = $this->my_class->findTypeByClass($mc->id);
@@ -138,6 +157,7 @@ class MarkController extends Controller
 
         return view('pages.support_team.marks.show.index', $d);
     }
+
 
 
 
@@ -183,6 +203,28 @@ class MarkController extends Controller
         });
 
         //$d['mark_type'] = Qs::getMarkType($ct);
+
+            // Calculate the overall weighted average based on subject coefficients
+            $totalMoyCoeff = 0;
+            $totalCoeff = 0;
+
+            foreach ($d['subjects'] as $sub) {
+                foreach ($d['marks']->where('subject_id', $sub->id)->where('exam_id', $exam_id) as $mk) {
+                    $subjectCoeff = $sub->coefficient;
+                    $totalCoeff += $subjectCoeff;
+                    $moy = ($mk->t1 + $mk->exm) / 2;
+                    $moyCoeff = $moy * $subjectCoeff;
+                    $totalMoyCoeff += $moyCoeff;
+                }
+            }
+
+            $finalMoyenne = ($totalCoeff > 0) ? ($totalMoyCoeff / $totalCoeff) : '-';
+
+            // Pass the calculated values to the view
+            $d['finalMoyenne'] = $finalMoyenne;
+            $d['totalMoyCoeff'] =  $totalMoyCoeff;
+            $d['totalCoeff'] = $totalCoeff;
+
 
         return view('pages.support_team.marks.print.index', $d);
     }
