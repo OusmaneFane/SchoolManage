@@ -446,14 +446,13 @@ class MarkController extends Controller
         $d['exams'] = $this->exam->getExam(['year' => $this->year]);
         $d['selected'] = FALSE;
 
-        if($class_id && $exam_id && $section_id){
-
+        if ($class_id && $exam_id && $section_id) {
             $wh = ['my_class_id' => $class_id, 'section_id' => $section_id, 'exam_id' => $exam_id, 'year' => $this->year];
 
             $sub_ids = $this->mark->getSubjectIDs($wh);
             $st_ids = $this->mark->getStudentIDs($wh);
 
-            if(count($sub_ids) < 1 OR count($st_ids) < 1) {
+            if (count($sub_ids) < 1 || count($st_ids) < 1) {
                 return Qs::goWithDanger('marks.tabulation', __('msg.srnf'));
             }
 
@@ -470,15 +469,35 @@ class MarkController extends Controller
             $d['exr'] = $exr = $this->exam->getRecord($wh);
 
             $d['my_class'] = $mc = $this->my_class->find($class_id);
-            $d['section']  = $this->my_class->findSection($section_id);
+            $d['section'] = $this->my_class->findSection($section_id);
             $d['ex'] = $exam = $this->exam->find($exam_id);
-            $d['tex'] = 'tex'.$exam->term;
-            //$d['class_type'] = $this->my_class->findTypeByClass($mc->id);
-            //$d['ct'] = $ct = $d['class_type']->code;
+            $d['tex'] = 'tex' . $exam->term;
+
+            // Calculate the overall weighted average based on subject coefficients
+            $totalMoyCoeff = 0;
+            $totalCoeff = 0;
+            $moy = 0;
+
+            foreach ($d['subjects'] as $sub) {
+                foreach ($d['marks']->where('subject_id', $sub->id)->where('exam_id', $exam_id) as $mk) {
+                    $subjectCoeff = $sub->coefficient;
+                    $totalCoeff += $subjectCoeff;
+                    $moy = ($mk->t1 + $mk->exm) / 2;
+                    $moyCoeff = $moy * $subjectCoeff;
+                    $totalMoyCoeff += $moyCoeff;
+                }
+            }
+
+            $finalMoyenne = ($totalCoeff > 0) ? ($totalMoyCoeff / $totalCoeff) : '-';
+
+            // Pass the calculated values to the view
+            $d['finalMoyenne'] = $finalMoyenne;
+            $d['moy'] = $moy;
         }
 
         return view('pages.support_team.marks.tabulation.index', $d);
     }
+
 
     public function print_tabulation($exam_id, $class_id, $section_id)
     {
