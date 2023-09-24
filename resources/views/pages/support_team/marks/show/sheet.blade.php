@@ -47,8 +47,10 @@
         <td colspan="5"><strong>TOTAL SCORES OBTENUS: </strong> {{ $totalMoyCoeff }}</td>
         <td colspan="1"><strong>TOTAL COEFF: </strong> {{ $totalCoeff }}</td>
 
-        <td colspan="3"><strong>MOYENNE FINALE: </strong> {{ $finalMoyenne }}</td>
-        <td colspan="2"><strong>MOYENNE DE LA CLASSE: </strong> {{ $exr->class_ave }}</td>
+        <td colspan="2"><strong>MOYENNE FINALE: </strong> {{ $finalMoyenne }}</td>
+        <td colspan="1"><strong>RANG: </strong>{{ $exr->where('student_id', $sr->user_id)->first()->pos }}</td>
+
+        <td colspan="1"><strong>MOYENNE DE LA CLASSE: </strong> {{ $exr->class_ave }}</td>
     </tr>
     </tbody>
 </table>
