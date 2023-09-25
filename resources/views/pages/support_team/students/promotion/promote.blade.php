@@ -5,8 +5,8 @@
         <tr>
             <th>#</th>
             <th>Photo</th>
-            <th>Name</th>
-            <th>Current Session</th>
+            <th>Nom & Prénom(s)</th>
+            <th>Session Actuelle</th>
             <th>Action</th>
         </tr>
         </thead>
@@ -19,9 +19,9 @@
                 <td>{{ $sr->session }}</td>
                 <td>
                     <select class="form-control select" name="p-{{$sr->id}}" id="p-{{$sr->id}}">
-                        <option value="P">Promote</option>
-                        <option value="D">Don't Promote</option>
-                        <option value="G">Graduated</option>
+                        <option value="P">Promu(e)</option>
+                        <option value="D">Non Promu(e)</option>
+                        <option value="G">Diplômé(e)</option>
                     </select>
                 </td>
             </tr>
@@ -29,6 +29,6 @@
         </tbody>
     </table>
     <div class="text-center mt-3">
-        <button class="btn btn-success"><i class="icon-stairs-up mr-2"></i> Promote Students</button>
+        <button class="btn btn-success"><i class="icon-stairs-up mr-2"></i>Promouvoir les eleves</button>
     </div>
 </form>

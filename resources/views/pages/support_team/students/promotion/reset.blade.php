@@ -1,19 +1,19 @@
 @extends('layouts.master')
-@section('page_title', 'Manage Promotions')
+@section('page_title', 'Géstion des Promotions')
 @section('content')
 
     {{--Reset All--}}
     <div class="card">
         <div class="card-body text-center
 ">
-            <button id="promotion-reset-all" class="btn btn-danger btn-large">Reset All Promotions for the Session</button>
+            <button id="promotion-reset-all" class="btn btn-danger btn-large">Réinitialiser toutes les promotions de la session</button>
         </div>
     </div>
 
 {{-- Reset Promotions --}}
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h5 class="card-title font-weight-bold">Manage Promotions - Students Who Were Promoted From <span class="text-danger">{{ $old_year }}</span> TO <span class="text-success">{{ $new_year }}</span> Session</h5>
+            <h5 class="card-title font-weight-bold">Gérer les promotions - Étudiants promus de la session <span class="text-danger">{{ $old_year }}</span> à la session <span class="text-success">{{ $new_year }}</span> </h5>
             {!! Qs::getPanelOptions() !!}
         </div>
 
@@ -24,9 +24,9 @@
                 <tr>
                     <th>S/N</th>
                     <th>Photo</th>
-                    <th>Name</th>
-                    <th>From Class</th>
-                    <th>To Class</th>
+                    <th>Nom & Prénom(s)</th>
+                    <th>De la Classe</th>
+                    <th>A la Classe</th>
                     <th>Status</th>
                     <th>Action</th>
                 </tr>
@@ -40,14 +40,14 @@
                         <td>{{ $p->fc->name.' '.$p->fs->name }}</td>
                         <td>{{ $p->tc->name.' '.$p->ts->name }}</td>
                         @if($p->status === 'P')
-                            <td><span class="text-success">Promoted</span></td>
+                            <td><span class="text-success">Promu(e)</span></td>
                         @elseif($p->status === 'D')
-                            <td><span class="text-danger">Not Promoted</span></td>
+                            <td><span class="text-danger">Non promu</span></td>
                         @else
-                            <td><span class="text-primary">Graduated</span></td>
+                            <td><span class="text-primary">Diplômé(e)</span></td>
                         @endif
                         <td class="text-center">
-                            <button data-id="{{ $p->id }}" class="btn btn-danger promotion-reset">Reset</button>
+                            <button data-id="{{ $p->id }}" class="btn btn-danger promotion-reset">Réinitialiser</button>
                             <form id="promotion-reset-{{ $p->id }}" method="post" action="{{ route('students.promotion_reset', $p->id) }}">@csrf @method('DELETE')</form>
                         </td>
                     </tr>
