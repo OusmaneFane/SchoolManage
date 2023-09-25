@@ -64,7 +64,7 @@
         /* Single Reset */
         $('.promotion-reset').on('click', function () {
             let pid = $(this).data('id');
-            if (confirm('Are You Sure you want to proceed?')){
+            if (confirm('Êtes-vous sur de vouloir continuer?')){
                 $('form#promotion-reset-'+pid).submit();
             }
             return false;
@@ -72,7 +72,7 @@
 
         /* Reset All Promotions */
         $('#promotion-reset-all').on('click', function () {
-            if (confirm('Are You Sure you want to proceed?')){
+            if (confirm('Êtes-vous sur de vouloir continuer?')){
                 $.ajax({
                     url:"{{ route('students.promotion_reset_all') }}",
                     type:'DELETE',

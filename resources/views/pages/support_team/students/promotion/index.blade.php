@@ -4,7 +4,7 @@
 
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h5 class="card-title font-weight-bold">Promotion élèves  à partir de <span class="text-danger">{{ $old_year }}</span> à <span class="text-success">{{ $new_year }}</span> Session</h5>
+            <h5 class="card-title font-weight-bold">Promotion élèves  à partir de la Session <span class="text-danger">{{ $old_year }}</span> à la Session <span class="text-success">{{ $new_year }}</span> </h5>
             {!! Qs::getPanelOptions() !!}
         </div>
 

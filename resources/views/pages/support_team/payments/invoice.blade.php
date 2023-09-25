@@ -53,7 +53,7 @@
                                     @csrf
                              <div class="row">
                                  <div class="col-md-7">
-                                     <input min="1" max="{{ $uc->balance ?: $uc->payment->amount }}" id="val-{{ Qs::hash($uc->id) }}" class="form-control" required placeholder="Pay Now" title="Pay Now" name="amt_paid" type="number">
+                                     <input min="1" max="{{ $uc->balance ?: $uc->payment->amount }}" id="val-{{ Qs::hash($uc->id) }}" class="form-control" required placeholder="Payer Maintenant" title="Pay Now" name="amt_paid" type="number">
                                  </div>
                                  <div class="col-md-5">
                                      <button data-text="Pay" class="btn btn-danger" type="submit">Payer <i class="icon-paperplane ml-2"></i></button>

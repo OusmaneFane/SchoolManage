@@ -16,7 +16,7 @@
                         <div class="form-group row">
                             <label class="col-lg-3 col-form-label font-weight-semibold">Titre <span class="text-danger">*</span></label>
                             <div class="col-lg-9">
-                                <input name="title" value="{{ old('title') }}" required type="text" class="form-control" placeholder="Eg. School Fees">
+                                <input name="title" value="{{ old('title') }}" required type="text" class="form-control" placeholder="Ex. Frais de scolarité">
                             </div>
                         </div>
 
@@ -24,7 +24,7 @@
                             <label for="my_class_id" class="col-lg-3 col-form-label font-weight-semibold">Classe </label>
                             <div class="col-lg-9">
                                 <select class="form-control select-search" name="my_class_id" id="my_class_id">
-                                    <option value="">All Classes</option>
+                                    <option value="">Toutes les Classes</option>
                                     @foreach($my_classes as $c)
                                         <option {{ old('my_class_id') == $c->id ? 'selected' : '' }} value="{{ $c->id }}">{{ $c->name }}</option>
                                     @endforeach
@@ -36,8 +36,8 @@
                             <label for="method" class="col-lg-3 col-form-label font-weight-semibold">Methode de Paiement</label>
                             <div class="col-lg-9">
                                 <select class="form-control select" name="method" id="method">
-                                    <option selected value="Cash">Cash</option>
-                                    <option disabled value="Online">Online</option>
+                                    <option selected value="Cash">Espèce</option>
+                                    <option  value="Online">Chèque</option>
                                 </select>
                             </div>
                         </div>
