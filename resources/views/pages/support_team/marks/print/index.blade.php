@@ -20,8 +20,18 @@
                     </span></strong>
                 </td>
                 <td style="width: 100px; height: 100px; float: left;">
-                    <img src="{{ asset('global_assets/images/user.png') }}"
-                         alt="..."  width="100" height="100">
+                    {{-- 
+                    @if($sr->user->photo === '')
+                        <img src="{{ asset('global_assets/images/user.png') }}"
+                            alt="..."  width="100" height="100">     
+                        
+                    @else
+                        <img src="{{ $sr->user->photo }}" alt="..." width="100" height="100">                   
+                    @endif
+                    --}}
+                     <img src="{{ asset('global_assets/images/user.png') }}"
+                            alt="..."  width="100" height="100">  
+                    
                 </td>
             </tr>
         </table>

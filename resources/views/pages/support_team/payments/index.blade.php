@@ -17,7 +17,7 @@
                             <div class="col-md-10">
                                 <div class="form-group">
                                     <label for="year" class="col-form-label font-weight-bold">Choisissez L'année<span class="text-danger">*</span></label>
-                                    <select data-placeholder="Select Year" required id="year" name="year" class="form-control select">
+                                    <select data-placeholder="Selectionnez l'année" required id="year" name="year" class="form-control select">
                                         @foreach($years as $yr)
                                             <option {{ ($selected && $year == $yr->year) ? 'selected' : '' }} value="{{ $yr->year }}">{{ $yr->year }}</option>
                                         @endforeach

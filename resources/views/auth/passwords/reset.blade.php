@@ -8,7 +8,7 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Reset Password</h3>
+                            <h3 class="card-title">Réinitialiser le mot de passe</h3>
                             <hr>
                             @if($errors->any())
                                 <div class="alert alert-danger border-0 alert-dismissible">
