@@ -7,13 +7,13 @@
         <div class="content">
             <div class="card">
                 <div class="card-header">
-                    <h1 class="card-title font-weight-bold text-center">PRIVACY POLICY</h1>
+                    <h1 class="card-title font-weight-bold text-center">POLITIQUE DE CONFIDENTIALITÉ</h1>
                 </div>
 
                 <div class="card-body">
                     <div class="row">
                         <div style="font-size: 16px;" class="col-md-10 offset-md-1">
-                            <p>Dernière Modification: November 21, 2023</p>
+                            <p>Dernière Modification: 21, November  2023</p>
 
                             <h4 class="font-weight-semibold">Introduction</h4>
 
@@ -42,98 +42,96 @@
                             <ul>
                                 <li>par lesquels vous pouvez être personnellement identifié (« informations personnelles » );</li>
                                 <li>il s'agit de vous mais ne vous identifie pas individuellement ; et/ou</li>
-                                <li>about your internet connection, the equipment you use to access our Website, and usage details.</li>
+                                <li>sur votre connexion Internet, l'équipement que vous utilisez pour accéder à notre site Web et les détails d'utilisation.</li>
                             </ul>
 
-                            <p>We collect this information:</p>
+                            <p>Nous collectons ces informations :</p>
 
                             <ul>
                                 <li>Directly from you when you provide it to us.</li>
-                                <li>Automatically as you navigate through the site. Information collected automatically may include usage details, IP addresses, and information collected through cookies or other tracking technologies.</li>
+                                <li>Automatiquement lorsque vous naviguez sur le site. Les informations collectées automatiquement peuvent inclure des détails d'utilisation, des adresses IP et des informations collectées via des cookies ou d'autres technologies de suivi.</li>
                             </ul>
 
-                            <h4 class="font-weight-semibold">Information You Provide to Us. The information we collect on or through our Website may include:</h4>
+                            <h4 class="font-weight-semibold">Informations que vous nous fournissez. Les informations que nous collectons sur ou via notre site Web peuvent inclure :</h4>
 
                             <ul>
-                                <li>Information that you provide by filling in forms or surveys on our Website. Personal information submitted will not be transferred to any non-affiliated third parties unless otherwise stated at the time of collection. When you submit personal information, it is used only for the purpose stated at the time of collection.</li>
-                                <li>Records and copies of your correspondence (including email addresses), if you contact us.</li>
+                                <li>Informations que vous fournissez en remplissant des formulaires ou des enquêtes sur notre site Web. Les informations personnelles soumises ne seront pas transférées à des tiers non affiliés, sauf indication contraire au moment de la collecte. Lorsque vous soumettez des informations personnelles, celles-ci sont utilisées uniquement aux fins indiquées au moment de la collecte.</li>
+                                <li>Enregistrements et copies de votre correspondance (y compris vos adresses e-mail), si vous nous contactez.</li>                            </ul>
+
+                           <h4 class="font-weight-semibold">Informations que nous collectons grâce aux technologies de collecte automatique de données :</h4>
+
+                            <p>Lorsque vous naviguez et interagissez avec notre site Web, nous pouvons utiliser des technologies de collecte automatique de données pour collecter certaines informations sur votre équipement, vos actions de navigation et vos habitudes, notamment :</p>
+
+                           <ul>
+                                <li>Détails de vos visites sur notre site Web, y compris les données de trafic, les données de localisation, les journaux et autres données de communication ainsi que les ressources auxquelles vous accédez et utilisez sur le site Web.</li>
+                                <li>Informations sur votre ordinateur et votre connexion Internet, y compris votre adresse IP, votre système d'exploitation et votre type de navigateur.</li>
                             </ul>
 
-                            <h4 class="font-weight-semibold">Information We Collect Through Automatic Data Collection Technologies:</h4>
-
-                            <p>As you navigate through and interact with our Website, we may use automatic data collection technologies to collect certain information about your equipment, browsing actions, and patterns, including:</p>
+                            <p>Les informations que nous collectons automatiquement sont des données statistiques et peuvent inclure des informations personnelles, et nous pouvons les conserver ou les associer à des informations personnelles que nous collectons par d'autres moyens ou que nous recevons de tiers. Il nous aide à améliorer notre site Web et à fournir un service meilleur et plus personnalisé, notamment en nous permettant de :</p>
 
                             <ul>
-                                <li>Details of your visits to our Website, including traffic data, location data, logs, and other communication data and the resources that you access and use on the Website.</li>
-                                <li>Information about your computer and internet connection, including your IP address, operating system, and browser type.</li>
+                                <li>Estimer la taille de notre audience et nos modèles d'utilisation.</li>
+                                <li>Accélérez vos recherches.</li>
+                                <li>Vous reconnaître lorsque vous revenez sur notre site Web.</li>
                             </ul>
 
-                            <p>The information we collect automatically is statistical data and may include personal information, and we may maintain it or associate it with personal information we collect in other ways or receive from third parties. It helps us to improve our Website and to deliver a better and more personalized service, including by enabling us to:</p>
+                           <p>Les technologies que nous utilisons pour cette collecte automatique de données peuvent inclure :</p>
 
                             <ul>
-                                <li>Estimate our audience size and usage patterns.</li>
-                                <li>Speed up your searches.</li>
-                                <li>Recognize you when you return to our Website.</li>
+                                <li><strong>Cookies</strong> (ou cookies de navigateur). Un cookie est un petit fichier déposé sur le disque dur de votre ordinateur. Vous pouvez refuser d'accepter les cookies du navigateur en activant le paramètre approprié sur votre navigateur. Cependant, si vous sélectionnez ce paramètre, vous ne pourrez peut-être pas accéder à certaines parties de notre site Web. À moins que vous n'ayez ajusté les paramètres de votre navigateur afin qu'il refuse les cookies, notre système émettra des cookies lorsque vous dirigerez votre navigateur vers notre site Web.</li>
+                                <li><strong>Cookies Flash.</strong> Certaines fonctionnalités de notre site Web peuvent utiliser des objets stockés localement (ou cookies Flash) pour collecter et stocker des informations sur vos préférences et votre navigation vers, depuis et sur notre site Web. Les cookies Flash ne sont pas gérés par les mêmes paramètres de navigateur que ceux utilisés pour les cookies du navigateur. Pour plus d'informations sur la gestion de vos paramètres de confidentialité et de sécurité pour les cookies Flash, consultez Choix concernant la manière dont nous utilisons et divulguons vos informations.</li>
+                                <li><strong>Balises Web.</strong> Les pages de notre site Web peuvent contenir de petits fichiers électroniques appelés balises Web (également appelées gifs clairs, balises pixel et gifs à pixel unique) qui nous permettent, par exemple : pour compter les utilisateurs qui ont visité ces pages et pour d'autres statistiques de sites Web associées (par exemple, enregistrer la popularité de certains contenus de sites Web et vérifier l'intégrité du système et du serveur).</li>
                             </ul>
 
-                            <p>The technologies we use for this automatic data collection may include:</p>
+                            <h4 class="font-weight-semibold">Comment nous utilisons vos informations</h4>
+
+                           <p>Nous utilisons les informations que nous collectons sur vous ou que vous nous fournissez, y compris les informations personnelles :</p>
 
                             <ul>
-                                <li><strong>Cookies</strong> (or browser cookies). A cookie is a small file placed on the hard drive of your computer. You may refuse to accept browser cookies by activating the appropriate setting on your browser. However, if you select this setting you may be unable to access certain parts of our Website. Unless you have adjusted your browser setting so that it will refuse cookies, our system will issue cookies when you direct your browser to our Website.</li>
-                                <li><strong>Flash Cookies.</strong> Certain features of our Website may use local stored objects (or Flash cookies) to collect and store information about your preferences and navigation to, from, and on our Website. Flash cookies are not managed by the same browser settings as are used for browser cookies. For information about managing your privacy and security settings for Flash cookies, see Choices About How We Use and Disclose Your Information.</li>
-                                <li><strong>Web Beacons.</strong> Pages of our Website may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit us, for example, to count users who have visited those pages and for other related website statistics (for example, recording the popularity of certain website content and verifying system and server integrity).</li>
+                                <li>Pour vous présenter notre site Web et son contenu.</li>
+                                <li>Pour vous permettre de participer aux fonctionnalités interactives de notre site Web.</li>
+                                <li>De toute autre manière que nous pouvons décrire lorsque vous fournissez les informations.</li>
+                                <li>À toute autre fin avec votre consentement.</li>
                             </ul>
 
-                            <h4 class="font-weight-semibold">How We Use Your Information</h4>
+                            <h4 class="font-weight-semibold">Divulgation de vos informations</h4>
 
-                            <p>We use information that we collect about you or that you provide to us, including any personal information:</p>
+                            <p>Nous pouvons divulguer des informations agrégées sur nos utilisateurs et des informations qui n'identifient aucun individu, sans restriction.</p>
+
+                            <p>Nous pouvons divulguer les informations personnelles que nous collectons ou que vous fournissez comme décrit dans cette politique de confidentialité :</p>
 
                             <ul>
-                                <li>To present our Website and its contents to you.</li>
-                                <li>To allow you to participate in interactive features on our Website.</li>
-                                <li>In any other way we may describe when you provide the information.</li>
-                                <li>For any other purpose with your consent.</li>
+                                <li>Pour remplir l'objectif pour lequel vous le fournissez.</li>
+                                <li>À toute autre fin divulguée par nous lorsque vous fournissez les informations.</li>
+                                <li>Avec votre consentement.</li>
                             </ul>
 
-                            <h4 class="font-weight-semibold">Disclosure of Your Information</h4>
-
-                            <p>We may disclose aggregated information about our users, and information that does not identify any individual, without restriction.</p>
-
-                            <p>We may disclose personal information that we collect or you provide as described in this privacy policy:</p>
+                            <p>Nous pouvons également divulguer vos informations personnelles :</p>
 
                             <ul>
-                                <li>To fulfill the purpose for which you provide it.</li>
-                                <li>For any other purpose disclosed by us when you provide the information.</li>
-                                <li>With your consent.</li>
+                                <li>Pour se conformer à toute ordonnance du tribunal, loi ou procédure judiciaire, y compris pour répondre à toute demande gouvernementale ou réglementaire.</li>
+                                <li>Pour faire respecter ou  Pour faire appliquer nos <a target="_blank" href="{{ route('terms_of_use') }}">Conditions d'utilisation</a>.</li>
+                                <li>Si nous pensons que la divulgation est nécessaire ou appropriée pour protéger nos droits, notre propriété ou la sécurité de nos étudiants ou d'autres personnes.</li>
                             </ul>
 
-                            <p>We may also disclose your personal information:</p>
+                            <h4 class="font-weight-semibold">Choix concernant la manière dont nous utilisons et divulguons vos informations</h4>
+                            <p>Nous nous efforçons de vous offrir des choix concernant les informations personnelles que vous nous fournissez. Nous avons créé des mécanismes pour vous offrir le contrôle suivant sur vos informations :</p>
 
                             <ul>
-                                <li>To comply with any court order, law, or legal process, including to respond to any government or regulatory request.</li>
-                                <li>To enforce or apply our <a target="_blank" href="{{ route('terms_of_use') }}">Terms of Use</a>.</li>
-                                <li>If we believe disclosure is necessary or appropriate to protect our rights, property, or safety of our students or others.</li>
+                                <li><strong>Technologies de suivi et publicité</strong>. Vous pouvez configurer votre navigateur pour refuser tout ou partie des cookies du navigateur, ou pour vous alerter lorsque des cookies sont envoyés. Pour savoir comment gérer vos paramètres de cookies Flash, visitez la page des paramètres de Flash Player sur le site Web d'Adobe. Si vous désactivez ou refusez les cookies, veuillez noter que certaines parties de ce site peuvent alors être inaccessibles ou ne pas fonctionner correctement.</li>
                             </ul>
 
-                            <h4 class="font-weight-semibold">Choices About How We Use and Disclose Your Information</h4>
-                            <p>We strive to provide you with choices regarding the personal information you provide to us. We have created mechanisms to provide you with the following control over your information:</p>
+                          <h4 class="font-weight-semibold">Sécurité des données</h4>
 
-                            <ul>
-                                <li><strong>Tracking Technologies and Advertising</strong>. You can set your browser to refuse all or some browser cookies, or to alert you when cookies are being sent. To learn how you can manage your Flash cookie settings, visit the Flash player settings page on Adobe's website. If you disable or refuse cookies, please note that some parts of this site may then be inaccessible or not function properly.</li>
-                            </ul>
+                            <p>Nous avons mis en œuvre des mesures conçues pour protéger vos informations personnelles contre toute perte accidentelle et contre tout accès, utilisation, modification et divulgation non autorisés.</p>
 
-                            <h4 class="font-weight-semibold">Data Security</h4>
+                            <h4 class="font-weight-semibold">Modifications de notre politique de confidentialité</h4>
 
-                            <p>We have implemented measures designed to secure your personal information from accidental loss and from unauthorized access, use, alteration, and disclosure.</p>
+                           <p>Notre politique est de publier toute modification que nous apportons à notre politique de confidentialité sur cette page. Si nous apportons des modifications importantes à la manière dont nous traitons les informations personnelles de nos utilisateurs, nous vous en informerons via un avis sur la page d'accueil du site Web. La date à laquelle la politique de confidentialité a été révisée pour la dernière fois est identifiée en haut de la page. Vous êtes responsable de visiter périodiquement notre site Web et cette politique de confidentialité pour vérifier tout changement.</p>
 
-                            <h4 class="font-weight-semibold">Changes to Our Privacy Policy</h4>
+                            <h4 class="font-weight-semibold">Coordonnées</h4>
 
-                           <p>It is our policy to post any changes we make to our privacy policy on this page. If we make material changes to how we treat our users' personal information, we will notify you through a notice on the Website home page. The date the privacy policy was last revised is identified at the top of the page. You are responsible for periodically visiting our Website and this privacy policy to check for any changes.</p>
-
-                            <h4 class="font-weight-semibold">Contact Information</h4>
-
-                            <p>To ask questions or comment about this privacy policy and our privacy practices, please call {{ $contact_phone }}</p>
-                        </div>
+                            <p>Pour poser des questions ou des commentaires sur cette politique de confidentialité et nos pratiques de confidentialité, veuillez appeler le {{ $contact_phone }}></p> </div>
                     </div>
                 </div>
 
