@@ -13,35 +13,35 @@
                 <div class="card-body">
                     <div class="row">
                         <div style="font-size: 16px;" class="col-md-10 offset-md-1">
-                            <p>Last modified: November 4, 2019</p>
+                            <p>Dernière Modification: November 21, 2023</p>
 
                             <h4 class="font-weight-semibold">Introduction</h4>
 
-                            <p>{{ $app_name }} ("We") respects your privacy and is committed to protecting it through our compliance with this policy.</p>
+                            <p>{{ $app_name }} (« Nous ») respectons votre vie privée et s'engage à la protéger en nous conformant à cette politique.</p>
 
-                            <p>This policy describes the types of information we may collect from you or that you may provide when you visit the website
-                                <a target="_blank" href="{{ $app_url }}">{{ $app_url }}</a> (our "Website") and our practices for collecting, using, maintaining, protecting, and disclosing that information.</p>
+                            <p>Cette politique décrit les types d'informations que nous pouvons collecter auprès de vous ou que vous pouvez fournir lorsque vous visitez le site Web.
+                                <a target="_blank" href="{{ $app_url }}">{{ $app_url }}</a> (notre « Site Web ») et nos pratiques en matière de collecte, d'utilisation, de conservation, de protection et de divulgation de ces informations.</p>
 
-                            <p>This policy applies to information we collect:</p>
+                            <p>Cette politique s'applique aux informations que nous collectons:</p>
 
                             <ul>
-                                <li>On this Website.</li>
-                                <li>In email, text, and other electronic messages between you and this Website.</li>
+                                <li>Sur ce site Web.</li>
+                                <li>Dans les e-mails, SMS et autres messages électroniques entre vous et ce site Web.</li>
                             </ul>
 
-                           <p> Please read this policy carefully to understand our policies and practices regarding your information and how we will treat it. If you do not agree with our policies and practices, your choice is to not use our Website. By accessing or using this Website, you agree to this privacy policy. This policy may change from time to time (see Changes to Our Privacy Policy). Your continued use of this Website after we make changes is deemed to be acceptance of those changes, so please check the policy periodically for updates.</p>
+                           <p> Veuillez lire attentivement cette politique pour comprendre nos politiques et pratiques concernant vos informations et la manière dont nous les traiterons. Si vous n'êtes pas d'accord avec nos politiques et pratiques, votre choix est de ne pas utiliser notre site Web. En accédant ou en utilisant ce site Web, vous acceptez cette politique de confidentialité. Cette politique peut changer de temps à autre (voir Modifications de notre politique de confidentialité). Votre utilisation continue de ce site Web après que nous ayons apporté des modifications est considérée comme une acceptation de ces modifications, veuillez donc vérifier périodiquement la politique pour les mises à jour.</p>
 
-                            <h4 class="font-weight-semibold">Children Under the Age of 13</h4>
+                            <h4 class="font-weight-semibold">Enfants de moins de 13 ans</h4>
 
-                           <p> We do not knowingly collect personal information from children under 13. If you are under 13, do not provide any information on this Website or on or through any of its features without first obtaining parental consent. If we learn we have collected or received personal information from a child under 13 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 13, please call {{ $contact_phone }}</p>
+                           <p>Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans. Si vous avez moins de 13 ans, ne fournissez aucune information sur ce site Web ou sur ou via l'une de ses fonctionnalités sans obtenir au préalable le consentement parental. Si nous apprenons que nous avons collecté ou reçu des informations personnelles d'un enfant de moins de 13 ans sans vérification du consentement parental, nous supprimerons ces informations. Si vous pensez que nous pourrions détenir des informations concernant un enfant de moins de 13 ans, veuillez appeler le {{ $contact_phone }}</p>
 
-                            <h4 class="font-weight-semibold">Information We Collect About You and How We Collect It</h4>
+                            <h4 class="font-weight-semibold">Informations que nous collectons à votre sujet et comment nous les collectons</h4>
 
-                            <p>We collect several types of information from and about users of our Website, including information:</p>
+                            <p>Nous collectons plusieurs types d'informations auprès des utilisateurs de notre site Web, notamment des informations:</p>
 
                             <ul>
-                                <li>by which you may be personally identified ("personal information");</li>
-                                <li>that is about you but individually does not identify you; and/or</li>
+                                <li>par lesquels vous pouvez être personnellement identifié (« informations personnelles » );</li>
+                                <li>il s'agit de vous mais ne vous identifie pas individuellement ; et/ou</li>
                                 <li>about your internet connection, the equipment you use to access our Website, and usage details.</li>
                             </ul>
 

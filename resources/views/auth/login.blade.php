@@ -30,7 +30,7 @@
 
 
                             <div class="form-group ">
-                                <input type="text" class="form-control" name="identity" value="{{ old('identity') }}" placeholder="Login ID or Email">
+                                <input type="text" class="form-control" name="identity" value="{{ old('identity') }}" placeholder="Nom d'utilisateur ou E-mail">
                             </div>
 
                             <div class="form-group ">

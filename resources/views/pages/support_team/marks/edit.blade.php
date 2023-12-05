@@ -29,6 +29,6 @@
     </table>
 
     <div class="text-center mt-2">
-        <button type="submit" class="btn btn-primary">Update Marks <i class="icon-paperplane ml-2"></i></button>
+        <button type="submit" class="btn btn-primary">Mettre à jour le formulaire <i class="icon-paperplane ml-2"></i></button>
     </div>
 </form>

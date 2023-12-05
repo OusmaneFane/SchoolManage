@@ -342,7 +342,7 @@ var Pnotify = function() {
                 notice.remove();
             })
 
-            // Submit form
+            // Envoyer le formulaire
             notice.get().submit(function() {
                 var username = $(this).find('input[name=username]').val();
                 if (!username) {

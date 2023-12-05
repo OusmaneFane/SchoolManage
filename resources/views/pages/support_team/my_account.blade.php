@@ -1,16 +1,16 @@
 @extends('layouts.master')
-@section('page_title', 'My Account')
+@section('page_title', 'Mon Compte')
 @section('content')
 
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h6 class="card-title">My Account</h6>
+            <h6 class="card-title">Mon Compte</h6>
             {!! Qs::getPanelOptions() !!}
         </div>
 
         <div class="card-body">
             <ul class="nav nav-tabs nav-tabs-highlight">
-                <li class="nav-item"><a href="#change-pass" class="nav-link active" data-toggle="tab">Change Password</a></li>
+                <li class="nav-item"><a href="#change-pass" class="nav-link active" data-toggle="tab">Changer le mot de passeord</a></li>
                 @if(Qs::userIsPTA())
                     <li class="nav-item"><a href="#edit-profile" class="nav-link" data-toggle="tab"><i class="icon-plus2"></i> Manage Profile</a></li>
                 @endif

@@ -96,7 +96,7 @@
 
                                         {{--SUBMIT--}}
                                         <div class="text-right">
-                                            <button type="submit" class="btn btn-primary">Submit Form <i class="icon-paperplane ml-2"></i>
+                                            <button type="submit" class="btn btn-primary">Envoyer le formulaire <i class="icon-paperplane ml-2"></i>
                                             </button>
                                         </div>
                                     </form>

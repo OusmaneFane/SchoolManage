@@ -216,7 +216,7 @@
 
                 {{--Manage Account--}}
                 <li class="nav-item">
-                    <a href="{{ route('my_account') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['my_account']) ? 'active' : '' }}"><i class="icon-user"></i> <span>My Account</span></a>
+                    <a href="{{ route('my_account') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['my_account']) ? 'active' : '' }}"><i class="icon-user"></i> <span>Mon Compte</span></a>
                 </li>
 
                 </ul>

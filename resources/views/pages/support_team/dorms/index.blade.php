@@ -80,7 +80,7 @@
                                 </div>
 
                                 <div class="text-right">
-                                    <button id="ajax-btn" type="submit" class="btn btn-primary">Submit form <i class="icon-paperplane ml-2"></i></button>
+                                    <button id="ajax-btn" type="submit" class="btn btn-primary">Envoyer le formulaire <i class="icon-paperplane ml-2"></i></button>
                                 </div>
                             </form>
                         </div>

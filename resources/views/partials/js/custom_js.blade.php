@@ -254,7 +254,7 @@
     }
 
     function enableBtn(btn){
-        var btnText = btn.data('text') ? btn.data('text') : 'Submit Form';
+        var btnText = btn.data('text') ? btn.data('text') : 'Envoyer le formulaire';
         btn.prop('disabled', false).html(btnText + '<i class="icon-paperplane ml-2"></i>');
     }
 
