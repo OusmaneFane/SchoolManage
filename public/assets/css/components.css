@@ -3391,7 +3391,7 @@ input[type=text].noui-height-helper:not(.noUi-target)[data-fouc] {
   color: #fff;
   display: inline-block;
   text-decoration: none;
-  background-color: #324148;
+  background-color: #1d539b;
   border: none;
   cursor: pointer;
   margin-left: 0.625rem;
@@ -15077,7 +15077,7 @@ textarea#HandsontableCopyPaste {
     .glyphs > div > div {
       transition: none; } }
   .glyphs > div > div:hover {
-    background-color: #324148;
+    background-color: #1d539b;
     color: #fff;
     border-radius: 0.1875rem; }
     .glyphs > div > div:hover .text-muted {

@@ -123,7 +123,7 @@
   --warning: #FF7043;
   --danger: #F44336;
   --light: #fafafa;
-  --dark: #324148;
+  --dark: #1d539b;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -2050,10 +2050,10 @@ fieldset:disabled a.btn {
 
 .btn-dark {
   color: #fff;
-  background-color: #324148; }
+  background-color: #1d539b; }
   .btn-dark:hover {
     color: #fff;
-    background-color: #324148; }
+    background-color: #1d539b; }
 
 .btn-outline-primary {
   color: #2196F3;
@@ -2182,22 +2182,22 @@ fieldset:disabled a.btn {
     border-color: #fafafa; }
 
 .btn-outline-dark {
-  color: #324148;
+  color: #1d539b;
   background-color: transparent;
   background-image: none;
-  border-color: #324148; }
+  border-color: #1d539b; }
   .btn-outline-dark:hover {
     color: #fff;
-    background-color: #324148;
-    border-color: #324148; }
+    background-color: #1d539b;
+    border-color: #1d539b; }
   .btn-outline-dark.disabled, .btn-outline-dark:disabled {
-    color: #324148;
+    color: #1d539b;
     background-color: transparent; }
   .btn-outline-dark:not([disabled]):not(.disabled):active, .btn-outline-dark:not([disabled]):not(.disabled).active,
   .show > .btn-outline-dark.dropdown-toggle {
     color: #fff;
-    background-color: #324148;
-    border-color: #324148; }
+    background-color: #1d539b;
+    border-color: #1d539b; }
 
 .btn-link {
   font-weight: 400;
@@ -3703,7 +3703,7 @@ input[type="button"].btn-block {
 
 .badge-dark {
   color: #fff;
-  background-color: #324148; }
+  background-color: #1d539b; }
   .badge-dark[href]:hover, .badge-dark[href]:focus {
     color: #fff;
     text-decoration: none; }
@@ -4652,7 +4652,7 @@ button.close {
   background-color: #fafafa !important; }
 
 .bg-dark {
-  background-color: #324148 !important; }
+  background-color: #1d539b !important; }
 
 .bg-white {
   background-color: #fff !important; }
@@ -4712,7 +4712,7 @@ button.close {
   border-color: #fafafa !important; }
 
 .border-dark {
-  border-color: #324148 !important; }
+  border-color: #1d539b !important; }
 
 .border-white {
   border-color: #fff !important; }
@@ -6721,7 +6721,7 @@ a.text-light:hover, a.text-light:focus {
   color: #e1e1e1 !important; }
 
 .text-dark {
-  color: #324148 !important; }
+  color: #1d539b !important; }
 
 a.text-dark:hover, a.text-dark:focus {
   color: #1d262a !important; }
