@@ -48,7 +48,11 @@
 
         {{--Photo--}}
         <div style="margin: 15px;">
-            <img style="width: 100px; height: 100px; float: left;" src="{{ $sr->user->photo }}" alt="...">
+            @if($sr->user->photo != "null")
+            ---<img style="width: 100px; height: 100px; float: left;" src="{{ $sr->user->photo }}" alt="...">
+            @else
+            <img style="width: 100px; height: 100px; float: left;" src="{{ asset('global_assets/images/user.png')}}">
+            @endif
         </div>
 
        <div style="float: left; margin-left: 20px">

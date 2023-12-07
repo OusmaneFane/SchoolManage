@@ -126,7 +126,7 @@
     function confirmDelete(id) {
         swal({
             title: "Etes-vous sûr?",
-            text: "Once deleted, you will not be able to recover this item!",
+            text: "Une fois supprimé, vous ne pourrez plus récupérer cet élément !",
             icon: "warning",
             buttons: true,
             dangerMode: true

@@ -16,7 +16,7 @@
                         <div class="card-body">
                             <div class="text-center mb-3">
                                 {{-- <i class="icon-people icon-2x text-warning-400 border-warning-400 border-3 rounded-round p-3 mb-3 mt-1"></i> --}}
-                            <img src="/images/FAVdoni.png" alt="">
+                            <img src="/images/digad.png" alt="">
                                 <h5 class="mb-0">Une école Simplifée</h5>
                                 <span class="d-block text-muted">Vos identifiants</span>
                             </div>

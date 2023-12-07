@@ -1,6 +1,64 @@
 @extends('layouts.master')
 @section('page_title', 'Gestion des Paiements')
 @section('content')
+ {{--<div class="card">
+        <div class="card-header header-elements-inline">
+            <h5 class="card-title"><i class="icon-cash2 mr-2"></i> Total</h5>
+            {!! Qs::getPanelOptions() !!}
+        </div>
+
+        @php
+            $totalMontant = 0;
+            $totalMontantPaye = 0;
+            $totalMontantImpaye = 0;
+        @endphp
+
+        @foreach($payments as $p)
+            @php
+                // Mise à jour du montant total
+                $totalMontant += $p->amount;
+            @endphp
+        @endforeach
+
+        @foreach($paymentRecords as $record)
+            @php
+                // Mise à jour des montants payés et impayés
+                $totalMontantPaye += $record->amt_paid;
+                $totalMontantImpaye += $record->balance;
+            @endphp
+        @endforeach
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card bg-success">
+                    <div class="card-body text-white">
+                        <h6 class="card-title">Montant Payé</h6>
+                        <p>{{ $totalMontantPaye }} F CFA</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card bg-danger">
+                    <div class="card-body text-white">
+                        <h6 class="card-title">Montant Impayé</h6>
+                        <p>{{ $totalMontantImpaye }} F CFA</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card bg-primary">
+                    <div class="card-body text-white">
+                        <h6 class="card-title">Montant Total</h6>
+                        <p>{{ $totalMontant }} F CFA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>--}}
+
+
 
     <div class="card">
         <div class="card-header header-elements-inline">
@@ -38,6 +96,7 @@
             </form>
         </div>
     </div>
+    
 
 @if($selected)
     <div class="card">

@@ -15,7 +15,8 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use PDF;
-
+use App\Models\Payment;
+use App\Models\PaymentRecord;
 class PaymentController extends Controller
 {
     protected $my_class, $pay, $student, $year;
@@ -30,13 +31,28 @@ class PaymentController extends Controller
         $this->middleware('teamAccount');
     }
 
-    public function index()
-    {
-        $d['selected'] = false;
-        $d['years'] = $this->pay->getPaymentYears();
 
-        return view('pages.support_team.payments.index', $d);
-    }
+// ...
+
+public function index()
+{
+    $d['selected'] = false;
+    $d['years'] = $this->pay->getPaymentYears();
+    $d['payments'] = Payment::all();  // Supposons que vous récupérez les paiements de la table "payments"
+    $d['paymentRecords'] = PaymentRecord::all();  // Récupérez les enregistrements de paiement de la table "payment_records"
+
+    // Calcul des montants payés et impayés
+    $totalMontantPaye = $d['paymentRecords']->sum('amt_paid');
+    $totalMontantImpaye = $d['paymentRecords']->sum('balance');
+
+    // Ajout des montants payés et impayés à la vue
+    $d['totalMontantPaye'] = $totalMontantPaye;
+    $d['totalMontantImpaye'] = $totalMontantImpaye;
+    
+    return view('pages.support_team.payments.index', $d);
+}
+
+
 
     public function show($year)
     {
