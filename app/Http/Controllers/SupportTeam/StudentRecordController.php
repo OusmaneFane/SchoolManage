@@ -89,7 +89,7 @@ class StudentRecordController extends Controller
         $data['my_class'] = $mc = $this->my_class->getMC(['id' => $class_id])->first();
         $data['students'] = $this->student->findStudentsByClass($class_id);
         $data['sections'] = $this->my_class->getClassSections($class_id);
-
+        
         return is_null($mc) ? Qs::goWithDanger() : view('pages.support_team.students.list', $data);
     }
 
