@@ -37,43 +37,44 @@
                         </thead>
                         <tbody>
                         @foreach($students as $s)
-                            <tr>
-                                <td>{{ $loop->iteration }}</td>
-                                @if($s->user)
-                                    <td> <img class="rounded-circle" style="height: 40px; width: 40px;" src="{{ $s->user->photo }}" alt="photo"></td>
-                                 @else
-                                 
-                                @endif
-                                <td>{{ $s->user->name : ''  }}</td>
-                                <td>{{ $s->adm_no : ''  }}</td>
-                                <td>{{ $my_class->name.' '.$s->section->name : '' }}</td>
-                                <td>{{ $s->user->email : ''  }}</td>
-                                <td class="text-center">
-                                    <div class="list-icons">
-                                        <div class="dropdown">
-                                            <a href="#" class="list-icons-item" data-toggle="dropdown">
-                                                <i class="icon-menu9"></i>
-                                            </a>
+    <tr>
+        <td>{{ $loop->iteration }}</td>
+        <td>
+            @if($s->user)
+                <img class="rounded-circle" style="height: 40px; width: 40px;" src="{{ $s->user->photo }}" alt="photo">
+            @endif
+        </td>
+        <td>{{ $s->user ? $s->user->name : '' }}</td>
+        <td>{{ $s->adm_no ? $s->adm_no : '' }}</td>
+        <td>{{ $my_class->name.' '.$s->section->name ? $my_class->name.' '.$s->section->name : '' }}</td>
+        <td>{{ $s->user ? $s->user->email : '' }}</td>
+        <td class="text-center">
+            <div class="list-icons">
+                <div class="dropdown">
+                    <a href="#" class="list-icons-item" data-toggle="dropdown">
+                        <i class="icon-menu9"></i>
+                    </a>
 
-                                            <div class="dropdown-menu dropdown-menu-left">
-                                                <a href="{{ route('students.show', Qs::hash($s->id)) }}" class="dropdown-item"><i class="icon-eye"></i>Voir le profile</a>
-                                                @if(Qs::userIsTeamSA())
-                                                    <a href="{{ route('students.edit', Qs::hash($s->id)) }}" class="dropdown-item"><i class="icon-pencil"></i> Modifier</a>
-                                                    <a href="{{ route('st.reset_pass', Qs::hash($s->user->id)) }}" class="dropdown-item"><i class="icon-lock"></i> Réinitialiser le mot de passe</a>
-                                                @endif
-                                                <a target="_blank" href="{{ route('marks.year_selector', Qs::hash($s->user->id)) }}" class="dropdown-item"><i class="icon-check"></i> Bulletins</a>
+                    <div class="dropdown-menu dropdown-menu-left">
+                        <a href="{{ route('students.show', Qs::hash($s->id)) }}" class="dropdown-item"><i class="icon-eye"></i> Voir le profile</a>
+                        @if(Qs::userIsTeamSA())
+                            <a href="{{ route('students.edit', Qs::hash($s->id)) }}" class="dropdown-item"><i class="icon-pencil"></i> Modifier</a>
+                            <a href="{{ route('st.reset_pass', Qs::hash($s->user->id)) }}" class="dropdown-item"><i class="icon-lock"></i> Réinitialiser le mot de passe</a>
+                        @endif
+                        <a target="_blank" href="{{ route('marks.year_selector', Qs::hash($s->user->id)) }}" class="dropdown-item"><i class="icon-check"></i> Bulletins</a>
 
-                                                {{--Delete--}}
-                                                @if(Qs::userIsSuperAdmin())
-                                                    <a id="{{ Qs::hash($s->user->id) }}" onclick="confirmDelete(this.id)" href="#" class="dropdown-item"><i class="icon-trash"></i> Supprimer</a>
-                                                    <form method="post" id="item-delete-{{ Qs::hash($s->user->id) }}" action="{{ route('students.destroy', Qs::hash($s->user->id)) }}" class="hidden">@csrf @method('delete')</form>
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        @endforeach
+                        {{--Delete--}}
+                        @if(Qs::userIsSuperAdmin())
+                            <a id="{{ Qs::hash($s->user->id) }}" onclick="confirmDelete(this.id)" href="#" class="dropdown-item"><i class="icon-trash"></i> Supprimer</a>
+                            <form method="post" id="item-delete-{{ Qs::hash($s->user->id) }}" action="{{ route('students.destroy', Qs::hash($s->user->id)) }}" class="hidden">@csrf @method('delete')</form>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+@endforeach
+
                         </tbody>
                     </table>
                 </div>
