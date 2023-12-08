@@ -15,7 +15,7 @@
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sections</a>
                     <div class="dropdown-menu dropdown-menu-right">
                         @foreach($sections as $s)
-                            <a href="#s{{ $s->id }}" class="dropdown-item" data-toggle="tab">{{ $my_class->name.' '.$s->name }}</a>
+                            <a href="#s{{ $s->id }}" class="dropdown-item" data-toggle="tab">{{ optional($my_class)->name.' '.optional($s)->name }}</a>
                         @endforeach
                     </div>
                 </li>
@@ -39,11 +39,15 @@
                         @foreach($students as $s)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td><img class="rounded-circle" style="height: 40px; width: 40px;" src="{{ $s->user->photo }}" alt="photo"></td>
-                                <td>{{ $s->user->name }}</td>
-                                <td>{{ $s->adm_no }}</td>
-                                <td>{{ $my_class->name.' '.$s->section->name }}</td>
-                                <td>{{ $s->user->email }}</td>
+                                <td>
+                                    @if(optional($s->user)->photo)
+                                        <img class="rounded-circle" style="height: 40px; width: 40px;" src="{{ optional($s->user)->photo }}" alt="photo">
+                                    @endif
+                                </td>
+                                <td>{{ optional($s->user)->name }}</td>
+                                <td>{{ optional($s)->adm_no }}</td>
+                                <td>{{ optional($my_class)->name.' '.optional($s->section)->name }}</td>
+                                <td>{{ optional($s->user)->email }}</td>
                                 <td class="text-center">
                                     <div class="list-icons">
                                         <div class="dropdown">
@@ -75,7 +79,8 @@
                 </div>
 
                 @foreach($sections as $se)
-                    <div class="tab-pane fade" id="s{{$se->id}}">                         <table class="table datatable-button-html5-columns">
+                    <div class="tab-pane fade" id="s{{$se->id}}">
+                        <table class="table datatable-button-html5-columns">
                             <thead>
                             <tr>
                                 <th>S/N</th>
@@ -90,10 +95,14 @@
                             @foreach($students->where('section_id', $se->id) as $sr)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><img class="rounded-circle" style="height: 40px; width: 40px;" src="{{ $sr->user->photo }}" alt="photo"></td>
-                                    <td>{{ $sr->user->name }}</td>
-                                    <td>{{ $sr->adm_no }}</td>
-                                    <td>{{ $sr->user->email }}</td>
+                                    <td>
+                                        @if(optional($sr->user)->photo)
+                                            <img class="rounded-circle" style="height: 40px; width: 40px;" src="{{ optional($sr->user)->photo }}" alt="photo">
+                                        @endif
+                                    </td>
+                                    <td>{{ optional($sr->user)->name }}</td>
+                                    <td>{{ optional($sr)->adm_no }}</td>
+                                    <td>{{ optional($sr->user)->email }}</td>
                                     <td class="text-center">
                                         <div class="list-icons">
                                             <div class="dropdown">
@@ -121,7 +130,6 @@
                                     </td>
                                 </tr>
                             @endforeach
-
                             </tbody>
                         </table>
                     </div>
