@@ -37,6 +37,7 @@
                         </thead>
                         <tbody>
                         @foreach($students as $s)
+                        @if(optional($s->user)->id)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>
@@ -73,6 +74,7 @@
                                     </div>
                                 </td>
                             </tr>
+                        @endif
                         @endforeach
                         </tbody>
                     </table>
@@ -93,6 +95,7 @@
                             </thead>
                             <tbody>
                             @foreach($students->where('section_id', optional($se)->id) as $sr)
+                              @if(optional($sr->user)->id)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>
@@ -129,6 +132,7 @@
                                         </div>
                                     </td>
                                 </tr>
+                                @endif
                             @endforeach
 
                             </tbody>
