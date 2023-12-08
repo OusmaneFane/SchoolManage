@@ -39,7 +39,11 @@
                         @foreach($students as $s)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td><img class="rounded-circle" style="height: 40px; width: 40px;" src="{{ $s->user->photo }}" alt="photo"></td>
+                                @if($s->user)
+                                    <td> <img class="rounded-circle" style="height: 40px; width: 40px;" src="{{ $s->user->photo }}" alt="photo"></td>
+                                 @else
+                                 
+                                @endif
                                 <td>{{ $s->user->name }}</td>
                                 <td>{{ $s->adm_no }}</td>
                                 <td>{{ $my_class->name.' '.$s->section->name }}</td>
