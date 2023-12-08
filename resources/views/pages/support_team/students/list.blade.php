@@ -44,10 +44,10 @@
                                  @else
                                  
                                 @endif
-                                <td>{{ $s->user->name }}</td>
-                                <td>{{ $s->adm_no }}</td>
-                                <td>{{ $my_class->name.' '.$s->section->name }}</td>
-                                <td>{{ $s->user->email }}</td>
+                                <td>{{ $s->user->name : ''  }}</td>
+                                <td>{{ $s->adm_no : ''  }}</td>
+                                <td>{{ $my_class->name.' '.$s->section->name : '' }}</td>
+                                <td>{{ $s->user->email : ''  }}</td>
                                 <td class="text-center">
                                     <div class="list-icons">
                                         <div class="dropdown">
