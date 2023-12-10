@@ -48,7 +48,7 @@
                             <p>Nous collectons ces informations :</p>
 
                             <ul>
-                                <li>Directly from you when you provide it to us.</li>
+                                <li>Directement de votre part lorsque vous nous le fournissez.</li>
                                 <li>Automatiquement lorsque vous naviguez sur le site. Les informations collectées automatiquement peuvent inclure des détails d'utilisation, des adresses IP et des informations collectées via des cookies ou d'autres technologies de suivi.</li>
                             </ul>
 
