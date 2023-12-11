@@ -18,7 +18,7 @@ class SettingsTableSeeder extends Seeder
         $data = [
             ['type' => 'current_session', 'description' => '2022-2023'],
             ['type' => 'system_title', 'description' => 'DSM'],
-            ['type' => 'system_name', 'description' => 'DONI SCHOOL MANAGEMENT'],
+            ['type' => 'system_name', 'description' => 'IGERE ECOLE'],
             ['type' => 'term_ends', 'description' => '7/10/2023'],
             ['type' => 'term_begins', 'description' => '7/10/2023'],
             ['type' => 'phone', 'description' => '+223 12345678'],
