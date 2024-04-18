@@ -15,6 +15,19 @@
     <div class="collapse navbar-collapse" id="navbar-mobile">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
+                <a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-globe"></i>
+                    <span class="d-md-none ml-2">Langue</span>
+                </a>
+
+                <!-- Options de langue dans le bouton déroulant -->
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="{{ route('set-language', ['lang' => 'fr']) }}" class="dropdown-item">Français</a>
+                    <a href="{{ route('set-language', ['lang' => 'en']) }}" class="dropdown-item">English</a>
+                    <!-- Ajoutez d'autres langues si nécessaire -->
+                </div>
+            </li>
+            <li class="nav-item dropdown">
                 <a href="{{ route('home') }}" class="navbar-nav-link">
                     <i class="icon-home"></i>
                     <span class="d-md-none ml-2">Home</span>
